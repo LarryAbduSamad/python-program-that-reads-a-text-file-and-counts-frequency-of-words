@@ -5,11 +5,12 @@ def read_file_content(filename):
         print(content)
         return content
     
-
 def count_words():
     text = read_file_content("story.txt")
     count = {}   
-    text.split()
+    text = text.split()
+    for word in text:
+        count[word] = text.count(word)
     return count
 
 print(count_words())
