@@ -1,21 +1,15 @@
 
-
-
 def read_file_content(filename):
-    with open(filename) as f:
-        content = f.read()
+    with open(filename) as file:
+        content = file.read()
+        print(content)
+        return content
     
-    return content
 
-print(read_file_content("story.txt"))
+def count_words():
+    text = read_file_content("story.txt")
+    count = {}   
+    text.split()
+    return count
 
-
-from collections import Counter
-
-def count_words(filename):
-        with open(filename) as f:
-            text = f.read()
-        
-        return Counter(text.split())
-
-print(count_words("story.txt"))
+print(count_words())
